@@ -1,0 +1,228 @@
+.container {
+    max-width: 900px;
+    min-width: 600px;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 5px 5px 20px #15151590;
+    padding-top: 5px;
+    border-radius: 5px;
+    padding-bottom: 15px;
+    height: fit-content;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.container .header {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    overflow-x: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header::-webkit-scrollbar {
+    height: 8px;
+}
+
+.header::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+}
+
+.header::-webkit-scrollbar-thumb {
+    background-color: #d5cfcf;
+    border-radius: 8px;
+}
+
+.container .header .section {
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+    font-size: 16px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.container .header .active {
+    border-bottom: 2px solid #A91D3A;
+    color: #A91D3A;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    padding-top: 0px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.detail .row {
+    display: flex;
+    gap: 15px;
+}
+
+.detail .column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail .row > div {
+    flex: 1;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.chips .new {
+    color: #A91D3A;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.chip {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 4px 10px;
+    background-color: #A91D3A;
+    border-radius: 30px;
+    cursor: default;
+}
+
+.chip p {
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #fff;
+}
+
+.chip svg {
+    color: #fff;
+    height: 14px;
+    width: 14px;
+    cursor: pointer;
+}
+
+.chip .active {
+    background-color: #A91D3A;
+}
+
+.body button {
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #A91D3A;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+    transition: 200ms;
+}
+
+.body button:active {
+    transform: translateY(2px);
+}
+
+/* Responsive Styling */
+@media (max-width: 991px) {
+    .container {
+        max-width: 700px;
+        min-width: 100%;
+        padding: 20px;
+    }
+
+    .body {
+        padding: 15px;
+    }
+
+    .detail .row {
+        flex-direction: column; /* Stack rows on smaller screens */
+    }
+
+    .chips {
+        gap: 15px; /* Reduce spacing */
+    }
+
+    .container .header .section {
+        font-size: 14px;
+    }
+
+    .body button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .chips {
+        gap: 10px; /* Reduce gap for smaller screens */
+    }
+
+    .chip {
+        padding: 3px 8px;
+    }
+
+    .chip p {
+        font-size: 14px;
+    }
+
+    .body button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .container .header {
+        flex-wrap: wrap; /* Allow header to wrap on smaller screens */
+    }
+
+    .chips {
+        gap: 5px;
+    }
+
+    .chip {
+        padding: 2px 6px;
+    }
+
+    .chip p {
+        font-size: 12px;
+    }
+
+    .container .header .section {
+        font-size: 12px;
+    }
+
+    .body button {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}

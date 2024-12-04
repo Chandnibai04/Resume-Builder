@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+label{
+    font-weight: 500;
+    font-size: 16px;
+}
+input{
+    border: 2px solid #151515;
+    outline: none;
+    padding: 10px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+input:hover{
+    border-color: #C73659;
+}
+input:focus{
+    border-color: #A91D3A;
+}
